@@ -1,25 +1,122 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, HelpCircle, Gamepad2, Lightbulb, Play, Video } from "lucide-react";
+import { ArrowRight, HelpCircle, Gamepad2, Lightbulb, Play, Video, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { useCallback, useEffect, useState } from 'react';
+
+// Import images
+import digitalPollutionImage1 from "@assets/image (1)_1751893128336.png";
+import digitalPollutionImage2 from "@assets/image (2)_1751893128336.png";
+import digitalPollutionImage3 from "@assets/image (3)_1751893128315.png";
+import digitalPollutionImage4 from "@assets/image_1751893128337.jpg";
+
+const carouselImages = [
+  {
+    src: digitalPollutionImage3,
+    alt: "Smartphone iceberg digital pollution concept"
+  },
+  {
+    src: digitalPollutionImage2,
+    alt: "Cloud pollution server concept"
+  },
+  {
+    src: digitalPollutionImage1,
+    alt: "Digital tree environmental impact"
+  },
+  {
+    src: digitalPollutionImage4,
+    alt: "Digital waste robot streaming concept"
+  }
+];
 
 export default function Home() {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true },
+    [Autoplay({ delay: 4000 })]
+  );
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+  }, [emblaApi, onSelect]);
+
   return (
     <div className="text-center">
-      {/* Hero Section */}
-      <div className="relative rounded-3xl overflow-hidden mb-8 h-96 bg-gradient-to-r from-green-400 to-blue-500">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="relative z-10 h-full flex items-center justify-center text-white">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Déchets Numériques Secrets</h1>
-            <p className="text-xl md:text-2xl mb-8">Nettoyez Votre Cloud Invisible !</p>
+      {/* Hero Section with Carousel */}
+      <div className="relative rounded-3xl overflow-hidden mb-8 h-96">
+        <div className="embla" ref={emblaRef}>
+          <div className="embla__container flex">
+            {carouselImages.map((image, index) => (
+              <div key={index} className="embla__slide flex-[0_0_100%] relative">
+                <div className="absolute inset-0">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/50 to-blue-600/70"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Content overlay */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center text-white">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+              Déchets Numériques Secrets
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
+              Nettoyez Votre Cloud Invisible !
+            </p>
             <Link href="/questionnaire">
-              <Button size="lg" className="bg-pollution-green hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105">
+              <Button size="lg" className="bg-pollution-green hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
                 Commencer l'Évaluation <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
         </div>
+
+        {/* Navigation buttons */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white border border-white/30 rounded-full"
+          onClick={scrollPrev}
+          disabled={!canScrollPrev}
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </Button>
+        
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white border border-white/30 rounded-full"
+          onClick={scrollNext}
+          disabled={!canScrollNext}
+        >
+          <ChevronRight className="h-6 w-6" />
+        </Button>
       </div>
 
       {/* Video Section */}
