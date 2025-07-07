@@ -11,11 +11,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="relative z-10 h-full flex items-center justify-center text-white">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Secret Data Waste</h1>
-            <p className="text-xl md:text-2xl mb-8">Clean Your Invisible Cloud!</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Déchets Numériques Secrets</h1>
+            <p className="text-xl md:text-2xl mb-8">Nettoyez Votre Cloud Invisible !</p>
             <Link href="/questionnaire">
               <Button size="lg" className="bg-pollution-green hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105">
-                Start Assessment <ArrowRight className="ml-2 h-5 w-5" />
+                Commencer l'Évaluation <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
@@ -29,10 +29,10 @@ export default function Home() {
             <div className="mb-6">
               <Video className="h-12 w-12 text-cloud-blue mb-4 mx-auto" />
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                Learn About Digital Pollution
+                Découvrez la Pollution Numérique
               </h2>
               <p className="text-gray-600 text-lg">
-                Watch this video to understand the environmental impact of our digital habits
+                Regardez cette vidéo pour comprendre l'impact environnemental de nos habitudes numériques
               </p>
             </div>
             
@@ -70,7 +70,7 @@ export default function Home() {
                   <Play className="h-8 w-8 ml-1" />
                 </Button>
                 <p className="text-white text-sm mt-4 font-medium">
-                  Click to watch video
+                  Cliquez pour regarder la vidéo
                 </p>
               </div>
               
@@ -84,8 +84,8 @@ export default function Home() {
             
             <div className="mt-4 text-sm text-gray-500">
               <p>
-                <strong>Video placeholder:</strong> Replace the onClick handler above with your actual video URL or embed code. 
-                You can use YouTube, Vimeo, or any other video platform.
+                <strong>Espace vidéo :</strong> Remplacez le gestionnaire onClick ci-dessus par votre URL vidéo ou code d'intégration réel. 
+                Vous pouvez utiliser YouTube, Vimeo ou toute autre plateforme vidéo.
               </p>
             </div>
           </CardContent>
@@ -98,12 +98,12 @@ export default function Home() {
           <Card className="card-hover cursor-pointer transition-all duration-300 hover:shadow-xl">
             <CardContent className="p-6">
               <HelpCircle className="h-12 w-12 text-cloud-blue mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-2">Digital Pollution Quiz</h3>
+              <h3 className="text-xl font-semibold mb-2">Quiz de Pollution Numérique</h3>
               <p className="text-gray-600">
-                Assess your digital footprint with our comprehensive questionnaire
+                Évaluez votre empreinte numérique avec notre questionnaire complet
               </p>
               <div className="mt-4 flex items-center justify-center text-cloud-blue">
-                <span className="text-sm font-medium">Start Quiz</span>
+                <span className="text-sm font-medium">Commencer le Quiz</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </div>
             </CardContent>
@@ -114,12 +114,12 @@ export default function Home() {
           <Card className="card-hover cursor-pointer transition-all duration-300 hover:shadow-xl">
             <CardContent className="p-6">
               <Gamepad2 className="h-12 w-12 text-green-500 mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-2">Server Clean-up Game</h3>
+              <h3 className="text-xl font-semibold mb-2">Jeu de Nettoyage Serveur</h3>
               <p className="text-gray-600">
-                Learn through interactive gameplay about digital waste management
+                Apprenez à travers un jeu interactif la gestion des déchets numériques
               </p>
               <div className="mt-4 flex items-center justify-center text-green-500">
-                <span className="text-sm font-medium">Play Game</span>
+                <span className="text-sm font-medium">Jouer</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </div>
             </CardContent>
@@ -130,12 +130,12 @@ export default function Home() {
           <Card className="card-hover cursor-pointer transition-all duration-300 hover:shadow-xl">
             <CardContent className="p-6">
               <Lightbulb className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-2">Personalized Tips</h3>
+              <h3 className="text-xl font-semibold mb-2">Conseils Personnalisés</h3>
               <p className="text-gray-600">
-                Get tailored advice to reduce your digital environmental impact
+                Obtenez des conseils adaptés pour réduire votre impact environnemental numérique
               </p>
               <div className="mt-4 flex items-center justify-center text-yellow-500">
-                <span className="text-sm font-medium">View Tips</span>
+                <span className="text-sm font-medium">Voir les Conseils</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </div>
             </CardContent>

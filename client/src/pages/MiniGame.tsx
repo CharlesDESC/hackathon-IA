@@ -161,9 +161,9 @@ export default function MiniGame() {
   };
 
   const getPollutionText = () => {
-    if (gameState.pollutionLevel < 30) return "Low";
-    if (gameState.pollutionLevel < 70) return "Medium";
-    return "High";
+    if (gameState.pollutionLevel < 30) return "Faible";
+    if (gameState.pollutionLevel < 70) return "Moyenne";
+    return "Élevée";
   };
 
   const getItemIcon = (type: string) => {
@@ -205,7 +205,7 @@ export default function MiniGame() {
   return (
     <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold text-gray-900 mb-8">
-        Server Clean-up Mini-Game
+        Mini-Jeu de Nettoyage Serveur
       </h2>
 
       <Card className="shadow-lg mb-8">
@@ -217,11 +217,11 @@ export default function MiniGame() {
               <div className="text-xl font-bold text-blue-600">{gameState.score}</div>
             </div>
             <div className="bg-green-50 p-3 rounded-lg">
-              <div className="text-sm text-gray-600">Items Cleared</div>
+              <div className="text-sm text-gray-600">Objets Triés</div>
               <div className="text-xl font-bold text-green-600">{gameState.itemsCleared}</div>
             </div>
             <div className="bg-purple-50 p-3 rounded-lg">
-              <div className="text-sm text-gray-600">Time Left</div>
+              <div className="text-sm text-gray-600">Temps Restant</div>
               <div className="text-xl font-bold text-purple-600">{gameState.timeLeft}s</div>
             </div>
             <div className="bg-gray-50 p-3 rounded-lg">
@@ -290,7 +290,7 @@ export default function MiniGame() {
                 onDragOver={handleDragOver}
               >
                 <Trash2 className="text-white h-8 w-8" />
-                <div className="absolute -bottom-8 text-white text-xs">Delete</div>
+                <div className="absolute -bottom-8 text-white text-xs">Supprimer</div>
               </div>
               <div
                 className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors"
@@ -298,7 +298,7 @@ export default function MiniGame() {
                 onDragOver={handleDragOver}
               >
                 <Archive className="text-white h-8 w-8" />
-                <div className="absolute -bottom-8 text-white text-xs">Archive</div>
+                <div className="absolute -bottom-8 text-white text-xs">Archiver</div>
               </div>
               <div
                 className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors"
@@ -306,7 +306,7 @@ export default function MiniGame() {
                 onDragOver={handleDragOver}
               >
                 <Recycle className="text-white h-8 w-8" />
-                <div className="absolute -bottom-8 text-white text-xs">Recycle</div>
+                <div className="absolute -bottom-8 text-white text-xs">Recycler</div>
               </div>
             </div>
           </div>
@@ -319,17 +319,17 @@ export default function MiniGame() {
                   gameState.gameResult === "win" ? "text-yellow-500" : "text-gray-400"
                 )} />
                 <h3 className="text-2xl font-bold">
-                  {gameState.gameResult === "win" ? "Planet Saved!" : "Game Over"}
+                  {gameState.gameResult === "win" ? "Planète Sauvée !" : "Jeu Terminé"}
                 </h3>
               </div>
               <p className="text-gray-600 mb-4">
                 {gameState.gameResult === "win" 
-                  ? "Great job! You've reduced digital pollution and saved the planet!"
-                  : "The planet is too polluted! Try again to improve your digital habits."
+                  ? "Excellent travail ! Vous avez réduit la pollution numérique et sauvé la planète !"
+                  : "La planète est trop polluée ! Réessayez pour améliorer vos habitudes numériques."
                 }
               </p>
               <p className="text-sm text-gray-500">
-                Final Score: {gameState.score} | Items Cleared: {gameState.itemsCleared}
+                Score Final : {gameState.score} | Objets Triés : {gameState.itemsCleared}
               </p>
             </div>
           )}
@@ -343,7 +343,7 @@ export default function MiniGame() {
                 className="bg-pollution-green hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105"
               >
                 <Play className="mr-2 h-5 w-5" />
-                Start Game
+                Commencer le Jeu
               </Button>
             )}
 
@@ -354,40 +354,40 @@ export default function MiniGame() {
                 className="bg-cloud-blue hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105"
               >
                 <RotateCcw className="mr-2 h-5 w-5" />
-                Play Again
+                Rejouer
               </Button>
             )}
           </div>
 
           {/* Instructions */}
           <div className="mt-8 text-left">
-            <h3 className="text-xl font-semibold mb-4 text-center">How to Play</h3>
+            <h3 className="text-xl font-semibold mb-4 text-center">Comment Jouer</h3>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2 flex items-center">
                   <Hand className="text-cloud-blue mr-2 h-5 w-5" />
-                  Drag & Drop
+                  Glisser-Déposer
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Drag the floating items into the correct bins to clean up digital waste.
+                  Glissez les objets flottants dans les bonnes poubelles pour nettoyer les déchets numériques.
                 </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2 flex items-center">
                   <Leaf className="text-green-500 mr-2 h-5 w-5" />
-                  Save the Planet
+                  Sauver la Planète
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Each correct action reduces pollution. Wrong moves increase it!
+                  Chaque action correcte réduit la pollution. Les mauvais mouvements l'augmentent !
                 </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2 flex items-center">
                   <Trophy className="text-yellow-500 mr-2 h-5 w-5" />
-                  Win Condition
+                  Condition de Victoire
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Clear all items before time runs out while keeping pollution low.
+                  Triez tous les objets avant la fin du temps tout en gardant une pollution faible.
                 </p>
               </div>
             </div>

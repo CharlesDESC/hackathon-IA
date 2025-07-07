@@ -40,10 +40,10 @@ export default function Questionnaire() {
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Digital Pollution Assessment
+          Évaluation de la Pollution Numérique
         </h2>
         <p className="text-gray-600 text-lg">
-          Answer these questions to understand your digital footprint
+          Répondez à ces questions pour comprendre votre empreinte numérique
         </p>
       </div>
 
@@ -94,7 +94,7 @@ export default function Questionnaire() {
           size="lg"
           className="bg-cloud-blue hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          View Results <ArrowRight className="ml-2 h-5 w-5" />
+          Voir les Résultats <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>
     </div>

@@ -25,14 +25,14 @@ export default function Results() {
     return (
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          No Results Found
+          Aucun Résultat Trouvé
         </h2>
         <p className="text-gray-600 mb-8">
-          Please complete the questionnaire first to see your results.
+          Veuillez d'abord compléter le questionnaire pour voir vos résultats.
         </p>
         <Link href="/questionnaire">
           <Button size="lg" className="bg-cloud-blue hover:bg-blue-600">
-            Take Questionnaire
+            Faire le Questionnaire
           </Button>
         </Link>
       </div>
@@ -56,10 +56,10 @@ export default function Results() {
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Your Digital Pollution Results
+          Vos Résultats de Pollution Numérique
         </h2>
         <p className="text-gray-600 text-lg">
-          Here's your environmental impact assessment
+          Voici votre évaluation d'impact environnemental
         </p>
       </div>
 
@@ -80,33 +80,33 @@ export default function Results() {
         {/* Environmental Impact */}
         <Card className="shadow-lg">
           <CardContent className="p-6">
-            <h3 className="text-xl font-semibold mb-4">Environmental Equivalents</h3>
+            <h3 className="text-xl font-semibold mb-4">Équivalences Environnementales</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center">
                   <Car className="text-gray-600 mr-3" />
-                  <span className="font-medium">CO2 Emissions</span>
+                  <span className="font-medium">Émissions CO2</span>
                 </div>
                 <span className="font-bold text-gray-900">
-                  {results.co2Annual} kg/year
+                  {results.co2Annual} kg/an
                 </span>
               </div>
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center">
                   <Route className="text-gray-600 mr-3" />
-                  <span className="font-medium">Driving Distance</span>
+                  <span className="font-medium">Distance de Conduite</span>
                 </div>
                 <span className="font-bold text-gray-900">
-                  {results.drivingKm} km/year
+                  {results.drivingKm} km/an
                 </span>
               </div>
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center">
                   <Droplets className="text-gray-600 mr-3" />
-                  <span className="font-medium">Water Usage</span>
+                  <span className="font-medium">Consommation d'Eau</span>
                 </div>
                 <span className="font-bold text-gray-900">
-                  {results.waterLiters} liters/year
+                  {results.waterLiters} litres/an
                 </span>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Results() {
       {/* Personalized Advice */}
       <Card className="shadow-lg mb-8">
         <CardContent className="p-6">
-          <h3 className="text-xl font-semibold mb-4">Personalized Recommendations</h3>
+          <h3 className="text-xl font-semibold mb-4">Recommandations Personnalisées</h3>
           <div className="grid md:grid-cols-2 gap-4">
             {results.advice.map((item, index) => (
               <div key={index} className="bg-gray-50 p-4 rounded-lg">
@@ -137,7 +137,7 @@ export default function Results() {
       <div className="text-center">
         <Link href="/tips">
           <Button size="lg" className="bg-pollution-green hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105">
-            Get More Tips <ArrowRight className="ml-2 h-5 w-5" />
+            Plus de Conseils <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </Link>
       </div>

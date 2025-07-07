@@ -31,18 +31,18 @@ export function calculatePollutionResults(
   if (scorePercentage < 35) {
     grade = "A";
     level = "low";
-    title = "Excellent Digital Habits!";
-    description = "You have low digital pollution impact";
+    title = "Excellentes Habitudes Numériques !";
+    description = "Vous avez un faible impact de pollution numérique";
   } else if (scorePercentage < 65) {
     grade = "B";
     level = "medium";
-    title = "Good Digital Habits";
-    description = "You have moderate digital pollution impact";
+    title = "Bonnes Habitudes Numériques";
+    description = "Vous avez un impact modéré de pollution numérique";
   } else {
     grade = "C";
     level = "high";
-    title = "Room for Improvement";
-    description = "You have high digital pollution impact";
+    title = "Des Améliorations Possibles";
+    description = "Vous avez un fort impact de pollution numérique";
   }
 
   // Calculate environmental equivalents
@@ -78,8 +78,8 @@ function generatePersonalizedAdvice(answers: Record<number, number>) {
   if (emailCleanup >= 1) {
     advice.push({
       icon: "fas fa-envelope",
-      title: "Email Management",
-      text: "Set up a weekly email cleanup routine. Unsubscribe from newsletters you don't read.",
+      title: "Gestion des Emails",
+      text: "Établissez une routine de nettoyage hebdomadaire. Désabonnez-vous des newsletters que vous ne lisez pas.",
       color: "text-red-500",
     });
   }
@@ -87,8 +87,8 @@ function generatePersonalizedAdvice(answers: Record<number, number>) {
   if (videoQuality >= 1) {
     advice.push({
       icon: "fas fa-video",
-      title: "Video Streaming",
-      text: "Lower streaming quality when possible. Download content for offline viewing.",
+      title: "Streaming Vidéo",
+      text: "Diminuez la qualité de streaming quand possible. Téléchargez du contenu pour le regarder hors ligne.",
       color: "text-blue-500",
     });
   }
@@ -96,8 +96,8 @@ function generatePersonalizedAdvice(answers: Record<number, number>) {
   if (cloudStorage >= 1) {
     advice.push({
       icon: "fas fa-cloud",
-      title: "Cloud Storage",
-      text: "Organize your cloud storage regularly. Delete unnecessary files and photos.",
+      title: "Stockage Cloud",
+      text: "Organisez votre stockage cloud régulièrement. Supprimez les fichiers et photos inutiles.",
       color: "text-purple-500",
     });
   }
@@ -105,8 +105,8 @@ function generatePersonalizedAdvice(answers: Record<number, number>) {
   if (fileCleanup >= 1) {
     advice.push({
       icon: "fas fa-folder",
-      title: "File Management",
-      text: "Schedule monthly file cleanup sessions. Archive old documents properly.",
+      title: "Gestion des Fichiers",
+      text: "Planifiez des sessions mensuelles de nettoyage. Archivez correctement les anciens documents.",
       color: "text-green-500",
     });
   }
@@ -114,8 +114,8 @@ function generatePersonalizedAdvice(answers: Record<number, number>) {
   if (recycleBin >= 1) {
     advice.push({
       icon: "fas fa-trash",
-      title: "Digital Waste",
-      text: "Empty your recycle bin weekly. Permanently delete unnecessary files.",
+      title: "Déchets Numériques",
+      text: "Videz votre corbeille chaque semaine. Supprimez définitivement les fichiers inutiles.",
       color: "text-gray-500",
     });
   }
@@ -124,8 +124,8 @@ function generatePersonalizedAdvice(answers: Record<number, number>) {
   if (advice.length < 3) {
     advice.push({
       icon: "fas fa-leaf",
-      title: "Keep It Up!",
-      text: "You're doing great! Share these habits with friends and family.",
+      title: "Continuez Ainsi !",
+      text: "Vous faites du bon travail ! Partagez ces habitudes avec vos amis et votre famille.",
       color: "text-green-500",
     });
   }

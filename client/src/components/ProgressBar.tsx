@@ -29,13 +29,13 @@ export default function ProgressBar({
   const getPollutionText = () => {
     switch (pollutionLevel) {
       case "low":
-        return "Low Digital Pollution";
+        return "Faible Pollution Numérique";
       case "medium":
-        return "Medium Digital Pollution";
+        return "Pollution Numérique Moyenne";
       case "high":
-        return "High Digital Pollution";
+        return "Forte Pollution Numérique";
       default:
-        return "Low Digital Pollution";
+        return "Faible Pollution Numérique";
     }
   };
 
@@ -55,7 +55,7 @@ export default function ProgressBar({
   return (
     <div className="mb-8">
       <div className="flex justify-between items-center mb-2">
-        <span className="text-sm text-gray-600">Progress</span>
+        <span className="text-sm text-gray-600">Progrès</span>
         <span className="text-sm text-gray-600">
           {answeredQuestions}/{totalQuestions}
         </span>

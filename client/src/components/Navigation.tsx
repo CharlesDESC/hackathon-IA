@@ -10,9 +10,9 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/questionnaire", label: "Questionnaire" },
-    { href: "/minigame", label: "Mini-Game" },
-    { href: "/results", label: "Results" },
-    { href: "/tips", label: "Tips" },
+    { href: "/minigame", label: "Mini-Jeu" },
+    { href: "/results", label: "Résultats" },
+    { href: "/tips", label: "Conseils" },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-3">
             <Cloud className="text-cloud-blue text-2xl" />
-            <h1 className="text-xl font-bold text-gray-900">Secret Data Waste</h1>
+            <h1 className="text-xl font-bold text-gray-900">Déchets Numériques Secrets</h1>
           </Link>
 
           {/* Desktop Navigation */}

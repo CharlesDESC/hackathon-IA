@@ -18,7 +18,7 @@ const tipBubbles: TipBubble[] = [
     id: "email",
     icon: Mail,
     color: "text-red-500",
-    tip: "Unsubscribe from newsletters you never read to reduce server storage and your inbox clutter.",
+    tip: "Désabonnez-vous des newsletters que vous ne lisez jamais pour réduire le stockage serveur et l'encombrement de votre boîte mail.",
     position: "top-16 left-16",
     animationDelay: "0s",
   },
@@ -26,7 +26,7 @@ const tipBubbles: TipBubble[] = [
     id: "cleanup",
     icon: Fan,
     color: "text-blue-500",
-    tip: "Clean your inbox weekly to reduce server storage and improve email performance.",
+    tip: "Nettoyez votre boîte mail chaque semaine pour réduire le stockage serveur et améliorer les performances email.",
     position: "top-20 right-20",
     animationDelay: "0.5s",
   },
@@ -34,7 +34,7 @@ const tipBubbles: TipBubble[] = [
     id: "cloud",
     icon: CloudUpload,
     color: "text-purple-500",
-    tip: "Avoid storing unnecessary files in the cloud to reduce data center energy consumption.",
+    tip: "Évitez de stocker des fichiers inutiles dans le cloud pour réduire la consommation énergétique des centres de données.",
     position: "bottom-32 left-20",
     animationDelay: "1s",
   },
@@ -42,7 +42,7 @@ const tipBubbles: TipBubble[] = [
     id: "video",
     icon: Video,
     color: "text-green-500",
-    tip: "Lower video streaming resolution when high quality isn't necessary to reduce bandwidth usage.",
+    tip: "Diminuez la résolution de streaming vidéo quand la haute qualité n'est pas nécessaire pour réduire l'usage de bande passante.",
     position: "bottom-16 right-16",
     animationDelay: "1.5s",
   },
@@ -50,7 +50,7 @@ const tipBubbles: TipBubble[] = [
     id: "images",
     icon: Images,
     color: "text-yellow-500",
-    tip: "Delete duplicate photos and videos to free up storage space and reduce cloud sync energy.",
+    tip: "Supprimez les photos et vidéos en double pour libérer l'espace de stockage et réduire l'énergie de synchronisation cloud.",
     position: "top-32 left-1/2 transform -translate-x-1/2",
     animationDelay: "2s",
   },
@@ -58,7 +58,7 @@ const tipBubbles: TipBubble[] = [
     id: "trash",
     icon: Trash2,
     color: "text-red-500",
-    tip: "Empty your trash regularly to ensure deleted files don't continue consuming storage space.",
+    tip: "Videz votre corbeille régulièrement pour vous assurer que les fichiers supprimés ne continuent pas à consommer de l'espace de stockage.",
     position: "bottom-24 left-1/2 transform -translate-x-1/2",
     animationDelay: "2.5s",
   },
@@ -66,7 +66,7 @@ const tipBubbles: TipBubble[] = [
     id: "ai",
     icon: Bot,
     color: "text-indigo-500",
-    tip: "Limit AI usage when not essential as AI models require significant computational resources.",
+    tip: "Limitez l'utilisation de l'IA quand ce n'est pas essentiel car les modèles IA nécessitent des ressources informatiques importantes.",
     position: "top-40 right-32",
     animationDelay: "3s",
   },
@@ -74,7 +74,7 @@ const tipBubbles: TipBubble[] = [
     id: "mobile",
     icon: Smartphone,
     color: "text-cyan-500",
-    tip: "Optimize your smartphone storage by removing unused apps and clearing cache regularly.",
+    tip: "Optimisez le stockage de votre smartphone en supprimant les applications inutilisées et en vidant le cache régulièrement.",
     position: "bottom-40 left-32",
     animationDelay: "3.5s",
   },
@@ -87,10 +87,10 @@ export default function Tips() {
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Digital Pollution Reduction Tips
+          Conseils pour Réduire la Pollution Numérique
         </h2>
         <p className="text-gray-600 text-lg">
-          Interactive tips to help reduce your digital environmental impact
+          Conseils interactifs pour vous aider à réduire votre impact environnemental numérique
         </p>
       </div>
 
@@ -121,9 +121,9 @@ export default function Tips() {
           <Card className="bg-white bg-opacity-90 shadow-lg">
             <CardContent className="p-6">
               <div className="text-3xl text-gray-600 mb-4">👆</div>
-              <h3 className="text-xl font-semibold mb-2">Click the floating tips!</h3>
+              <h3 className="text-xl font-semibold mb-2">Cliquez sur les conseils flottants !</h3>
               <p className="text-gray-600">
-                Each bubble contains actionable advice to reduce your digital footprint
+                Chaque bulle contient des conseils pratiques pour réduire votre empreinte numérique
               </p>
             </CardContent>
           </Card>
@@ -135,7 +135,7 @@ export default function Tips() {
             <DialogContent className="sm:max-w-md">
               <DialogHeader>
                 <DialogTitle className="flex items-center gap-2">
-                  💡 Tip
+                  💡 Conseil
                   <Button
                     variant="ghost"
                     size="icon"
@@ -152,7 +152,7 @@ export default function Tips() {
                   onClick={() => setSelectedTip(null)}
                   className="w-full bg-pollution-green hover:bg-green-600"
                 >
-                  Got it!
+                  Compris !
                 </Button>
               </div>
             </DialogContent>
@@ -165,10 +165,10 @@ export default function Tips() {
         <Card className="shadow-lg">
           <CardContent className="p-6">
             <Leaf className="h-12 w-12 text-green-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Email Management</h3>
+            <h3 className="text-lg font-semibold mb-2">Gestion des Emails</h3>
             <p className="text-gray-600 text-sm">
-              Regular cleanup of emails and unsubscribing from unwanted newsletters can
-              significantly reduce server storage needs.
+              Le nettoyage régulier des emails et le désabonnement des newsletters non désirées peut
+              réduire significativement les besoins de stockage serveur.
             </p>
           </CardContent>
         </Card>
@@ -176,10 +176,10 @@ export default function Tips() {
         <Card className="shadow-lg">
           <CardContent className="p-6">
             <Recycle className="h-12 w-12 text-blue-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Data Organization</h3>
+            <h3 className="text-lg font-semibold mb-2">Organisation des Données</h3>
             <p className="text-gray-600 text-sm">
-              Organize and archive old files regularly to maintain clean digital storage
-              and reduce unnecessary cloud sync.
+              Organisez et archivez régulièrement les anciens fichiers pour maintenir un stockage numérique propre
+              et réduire la synchronisation cloud inutile.
             </p>
           </CardContent>
         </Card>
@@ -187,10 +187,10 @@ export default function Tips() {
         <Card className="shadow-lg">
           <CardContent className="p-6">
             <Tv className="h-12 w-12 text-purple-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Streaming Habits</h3>
+            <h3 className="text-lg font-semibold mb-2">Habitudes de Streaming</h3>
             <p className="text-gray-600 text-sm">
-              Adjust video quality settings and download content for offline viewing to
-              reduce streaming bandwidth.
+              Ajustez les paramètres de qualité vidéo et téléchargez du contenu pour le regarder hors ligne afin de
+              réduire la bande passante de streaming.
             </p>
           </CardContent>
         </Card>

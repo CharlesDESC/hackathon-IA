@@ -106,3 +106,4 @@ Changelog:
 - July 07, 2025. Initial setup
 - July 07, 2025. Added fully functional mini-game with drag-and-drop mechanics, real-time scoring, and timer system
 - July 07, 2025. Added video section to landing page with interactive play button and placeholder for video content
+- July 07, 2025. Translated entire website interface to French including all pages, components, questionnaire, and game elements
