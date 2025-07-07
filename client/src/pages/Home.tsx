@@ -94,35 +94,53 @@ export default function Home() {
 
       {/* Features Grid */}
       <div className="grid md:grid-cols-3 gap-8 mb-12">
-        <Card className="card-hover">
-          <CardContent className="p-6">
-            <HelpCircle className="h-12 w-12 text-cloud-blue mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold mb-2">Digital Pollution Quiz</h3>
-            <p className="text-gray-600">
-              Assess your digital footprint with our comprehensive questionnaire
-            </p>
-          </CardContent>
-        </Card>
+        <Link href="/questionnaire">
+          <Card className="card-hover cursor-pointer transition-all duration-300 hover:shadow-xl">
+            <CardContent className="p-6">
+              <HelpCircle className="h-12 w-12 text-cloud-blue mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Digital Pollution Quiz</h3>
+              <p className="text-gray-600">
+                Assess your digital footprint with our comprehensive questionnaire
+              </p>
+              <div className="mt-4 flex items-center justify-center text-cloud-blue">
+                <span className="text-sm font-medium">Start Quiz</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
 
-        <Card className="card-hover">
-          <CardContent className="p-6">
-            <Gamepad2 className="h-12 w-12 text-green-500 mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold mb-2">Server Clean-up Game</h3>
-            <p className="text-gray-600">
-              Learn through interactive gameplay about digital waste management
-            </p>
-          </CardContent>
-        </Card>
+        <Link href="/minigame">
+          <Card className="card-hover cursor-pointer transition-all duration-300 hover:shadow-xl">
+            <CardContent className="p-6">
+              <Gamepad2 className="h-12 w-12 text-green-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Server Clean-up Game</h3>
+              <p className="text-gray-600">
+                Learn through interactive gameplay about digital waste management
+              </p>
+              <div className="mt-4 flex items-center justify-center text-green-500">
+                <span className="text-sm font-medium">Play Game</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
 
-        <Card className="card-hover">
-          <CardContent className="p-6">
-            <Lightbulb className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold mb-2">Personalized Tips</h3>
-            <p className="text-gray-600">
-              Get tailored advice to reduce your digital environmental impact
-            </p>
-          </CardContent>
-        </Card>
+        <Link href="/tips">
+          <Card className="card-hover cursor-pointer transition-all duration-300 hover:shadow-xl">
+            <CardContent className="p-6">
+              <Lightbulb className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Personalized Tips</h3>
+              <p className="text-gray-600">
+                Get tailored advice to reduce your digital environmental impact
+              </p>
+              <div className="mt-4 flex items-center justify-center text-yellow-500">
+                <span className="text-sm font-medium">View Tips</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
       </div>
     </div>
   );
