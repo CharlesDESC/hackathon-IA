@@ -30,17 +30,19 @@ This is a modern web application focused on digital pollution awareness and educ
 ## Key Components
 
 ### Pages
-- **Home**: Landing page with app introduction and navigation
-- **Questionnaire**: Interactive assessment with 10+ questions about digital habits
+- **Home**: Landing page with app introduction, video section, and navigation
+- **Questionnaire**: Interactive assessment with 12 questions about digital habits
 - **Results**: Personalized pollution score with CO2 equivalents and recommendations
 - **Tips**: Interactive tips page with floating bubbles showing eco-friendly actions
-- **Mini-Game**: "Server Clean-up" game concept for educational engagement
+- **Mini-Game**: Fully functional "Server Clean-up" drag-and-drop game with real-time scoring
 
 ### Core Features
 - **Progress Tracking**: Dynamic progress bar that changes color based on pollution level
 - **Pollution Calculator**: Converts user responses to environmental impact metrics
 - **Responsive Design**: Mobile-first approach with adaptive layouts
 - **Interactive Elements**: Animated components and hover effects
+- **Video Section**: Placeholder video area on landing page with play button
+- **Drag-and-Drop Game**: Real-time mini-game with scoring system and timer
 
 ### UI Components
 - **Navigation**: Sticky header with responsive mobile menu
@@ -102,3 +104,5 @@ Preferred communication style: Simple, everyday language.
 
 Changelog:
 - July 07, 2025. Initial setup
+- July 07, 2025. Added fully functional mini-game with drag-and-drop mechanics, real-time scoring, and timer system
+- July 07, 2025. Added video section to landing page with interactive play button and placeholder for video content
