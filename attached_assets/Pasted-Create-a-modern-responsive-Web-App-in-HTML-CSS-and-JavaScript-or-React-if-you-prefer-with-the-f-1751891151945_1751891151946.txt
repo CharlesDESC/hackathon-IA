@@ -1,0 +1,54 @@
+Create a modern, responsive Web App in HTML, CSS, and JavaScript (or React if you prefer) with the following features:
+
+1️⃣ A **questionnaire page** about digital pollution, containing at least 10 questions such as:
+- "Do you regularly clean your email inbox?"
+- "How often do you watch videos in 4K?"
+- "Do you use cloud storage for photos and videos?"
+- "Do you delete old files from your devices?"
+- "How many unread emails do you have?"
+- "Do you use AI tools like ChatGPT or Copilot daily?"
+- "Do you archive documents you no longer need?"
+- "Do you backup your data weekly?"
+- "How often do you empty your recycle bin?"
+- "Do you optimize your smartphone storage?"
+
+2️⃣ A **progress bar** at the top or bottom of the page:
+- The bar should be **green** if the answers show low digital pollution
+- The bar should turn **red** if the answers show high pollution
+- The progress bar updates dynamically after each answer
+
+3️⃣ An **idea for a mini-game** to include or describe in the app:
+- The mini-game is called "Server Clean-up"
+- The player controls a digital agent that must **drag and drop floating icons (emails, videos, AI files) into the right bin**
+- Each action reduces the pollution of a virtual planet shown on screen
+- If the player deletes important data by mistake, the planet gets more polluted
+
+4️⃣ A **results page** after the questionnaire:
+- Displays an estimated score of digital pollution
+- Shows equivalences in kg of CO2, kilometers driven, liters of water consumed
+- Includes **personalized advice**
+
+5️⃣ A **tips page** with floating bubbles or buttons, each showing **simple actions to reduce digital pollution**, for example:
+- "Unsubscribe from newsletters you never read"
+- "Clean your inbox weekly"
+- "Avoid storing unnecessary files in the cloud"
+- "Lower video streaming resolution"
+- "Delete duplicate photos"
+- "Empty your trash regularly"
+- "Limit AI usage when not essential"
+
+6️⃣ The design should be:
+- Bright, modern, and clear
+- Use green and red colors for clarity
+- Mobile-friendly
+
+7️⃣ Provide clear navigation between:
+- Questionnaire
+- Mini-game description or link
+- Results
+- Tips page
+
+8️⃣ Add a **header with the project title**:
+"Secret Data Waste: Clean Your Invisible Cloud!"
+
+Make sure all texts are in English.
